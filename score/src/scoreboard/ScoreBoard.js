@@ -15,6 +15,7 @@ function ScoreBoard(props) {
                  player={props.player} 
                  strikes={props.strikes}
                  balls={props.balls} 
+                 strike={props.strike}
             />
         </div>
     )

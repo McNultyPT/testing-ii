@@ -11,7 +11,17 @@ class App extends React.Component {
   }
 
   strike = () => {
-    
+    if (this.state.strikes <= 2) {
+      this.setState((prevState) => {
+       return {
+         strikes: ++prevState.strikes
+       }
+      })
+    } else {
+      this.setState({
+        strikes: 0
+      })
+    }
   }
 
   render() {
@@ -21,6 +31,7 @@ class App extends React.Component {
           player={this.state.player} 
           strikes={this.state.strikes}
           balls={this.state.balls}
+          strike={this.strike}
         />
       </div>
     );
