@@ -6,7 +6,7 @@ function Dashboard(props) {
             <h2>Dashboard</h2>
             <button onClick={props.strike}>Strike</button>
             <button onClick={props.ball}>Ball</button>
-            <button>Foul</button>
+            <button onClick={props.foul}>Foul</button>
             <button>Hit</button>
         </div>
     );
