@@ -5,17 +5,23 @@ import ScoreBoard from './scoreboard/ScoreBoard';
 
 class App extends React.Component {
   state = {
-    atBat: [
-      {id: 1, player: 'player1', strikes: 0, balls: 0},
-      // {id: 2, name: 'player2', strikes: 0, balls: 0},
-      // {id: 3, name: 'player3', strikes: 0, balls: 0}
-    ]
+    player: 'player1',
+    strikes: 0,
+    balls: 0
+  }
+
+  strike = () => {
+    
   }
 
   render() {
     return (
       <div className="App">
-        <ScoreBoard atBat={this.state.atBat} />
+        <ScoreBoard 
+          player={this.state.player} 
+          strikes={this.state.strikes}
+          balls={this.state.balls}
+        />
       </div>
     );
   }
