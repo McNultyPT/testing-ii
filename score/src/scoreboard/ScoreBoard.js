@@ -1,10 +1,14 @@
 import React from 'react';
 
-class ScoreBoard extends Component {
+import Display from '../display/Display';
+import Dashboard from '../dashboard/Dashboard';
+
+class ScoreBoard extends React.Component {
     render() {
         return(
             <div>
-                
+              <Display />
+              <Dashboard />  
             </div>
         );
     }
