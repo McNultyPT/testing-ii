@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import ScoreBoard from "./scoreboard/ScoreBoard";
+import Dashboard from './dashboard/Dashboard';
 
 class App extends React.Component {
   state = {
@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ScoreBoard
+        <Dashboard
           player={this.state.player}
           strikes={this.state.strikes}
           balls={this.state.balls}
