@@ -6,8 +6,8 @@ import Dashboard from '../dashboard/Dashboard';
 function ScoreBoard(props) {
     return (
         <div>
-            <Display players={props.players} />
-            <Dashboard players={props.players} />
+            <Display atBat={props.atBat} />
+            <Dashboard atBat={props.atBat} />
         </div>
     )
 }
