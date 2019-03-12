@@ -52,6 +52,13 @@ class App extends React.Component {
     }
   }
 
+  hit = () => {
+    this.setState({
+      strikes: 0,
+      balls: 0
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -62,6 +69,7 @@ class App extends React.Component {
           strike={this.strike}
           ball={this.ball}
           foul={this.foul}
+          hit={this.hit}
         />
       </div>
     );
