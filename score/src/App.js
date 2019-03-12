@@ -19,6 +19,22 @@ class App extends React.Component {
       })
     } else {
       this.setState({
+        strikes: 0,
+        balls: 0
+      })
+    }
+  }
+
+  ball = () => {
+    if (this.state.balls <= 3) {
+      this.setState((prevState) => {
+        return {
+          balls: ++prevState.balls
+        }
+      })
+    } else {
+      this.setState({
+        balls: 0,
         strikes: 0
       })
     }
@@ -32,6 +48,7 @@ class App extends React.Component {
           strikes={this.state.strikes}
           balls={this.state.balls}
           strike={this.strike}
+          ball={this.ball}
         />
       </div>
     );
